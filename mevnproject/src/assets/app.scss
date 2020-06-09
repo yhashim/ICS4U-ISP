@@ -1,0 +1,89 @@
+@import '~bootstrap/scss/bootstrap';
+
+/*Include parts of Bootstrap
+Required*/
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+/*Optional*/
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+
+/* this file is for more specific styling if needed */
+/* Sass is a style sheet language - looks a lot like CSS, but is an extension language of it */
+
+/* structure of all the bootstrap stuff with my project
+your-project/
+├── scss
+│   └── custom.scss
+└── node_modules/
+    └── bootstrap
+        ├── js
+        └── scss
+*/
+
+
+/* Define standard variables and values for website */
+$bgcolor: white;
+$darkcolor: black;
+$lightcolor: gray;
+
+
+.container, h6, p {
+	color: $lightcolor;
+}
+
+body {
+	background-color: $bgcolor; 
+	/*background-image: url(https://www.regionofwaterloo.ca/en/living-here/resources/Images/Medical-Exemption-WEB.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+}
+
+h1, h2, h3, h5, h6, p {
+	color: $darkcolor;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+th {
+	width: 25%;
+}
+
+table {
+   overflow-y:scroll;
+   height: 450px;
+   display:block;
+}
+
+/*button {
+	text-align: center;
+	align-content: center;
+	align-self: center;
+	align-items: center;
+}*/
+
+
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
